@@ -1,4 +1,5 @@
 using BasicMVC.Data;
+using BasicMVC.Services;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 
@@ -28,6 +29,7 @@ else
     app.UseHsts();
 }
 
+DatabaseManagementService.MigrationInitialisation(app);
 app.UseHttpsRedirection();
 app.UseStaticFiles();
 
