@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using System.ComponentModel;
+using System.ComponentModel.DataAnnotations;
 
 namespace BasicMVC.Models
 {
@@ -12,6 +13,7 @@ namespace BasicMVC.Models
         [StringLength(14, ErrorMessage = "O campo {0} precisa ter entre {2} e {1} caracters", MinimumLength = 11)]
         public string Document { get; set; }
 
+        [Display(Name = "Tipo de Fornecedor")]
         public SupplierType SupplierType { get; set; }
 
         public Address Address { get; set; }
